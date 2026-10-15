@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Synza Tech</title>
+<!-- Synza: fontes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" sizes="32x32" href="assets/favicon-32x32.png">
+</head>
+<body>
+
+<section class="hero" id="inicio">
+<!-- Fundo animado (começa quando a intro termina) -->
+<video id="loop" src="assets/Video Project.mp4" muted loop playsinline preload="auto"></video>
+
+<!-- Intro (toca uma vez) -->
+<video id="intro" src="assets/intro.mp4" muted playsinline autoplay preload="auto"></video>
+
+<!-- ===== Synza: interface sobre o vídeo (adicionado) ===== -->
+<div id="ui">
+  <header class="topo fx-down" style="--d:.1s">
+    <nav class="nav" aria-label="Principal">
+      <div class="l">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+      </div>
+      <a class="marca" href="#inicio">SYNZA</a>
+      <div class="r">
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+
+    <!-- menu do celular -->
+    <button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuMovel"><span></span><span></span><span></span></button>
+    <div class="menu-m" id="menuMovel">
+      <a href="#inicio" style="--i:1">Início</a>
+      <a href="#sobre" style="--i:2">Sobre</a>
+      <a href="#servicos" style="--i:3">Serviços</a>
+      <a href="#projetos" style="--i:4">Projetos</a>
+      <a href="#contato" style="--i:5">Contato</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="cols">
+      <section class="bloco">
+        <p class="rotulo fx-left" style="--d:.4s">Desenvolvimento de software</p>
+        <h1 class="fx-left" style="--d:.55s">Software sob medida para o seu negócio.</h1>
+        <p class="txt fx-left" style="--d:.7s">A Synza transforma ideias em sistemas sólidos, rápidos e prontos para crescer com a sua empresa.</p>
+      </section>
+      <div aria-hidden="true"></div>
+      <section class="bloco dir">
+        <p class="rotulo fx-right" style="--d:.5s">O que fazemos</p>
+        <ul>
+          <li class="fx-right" style="--d:.65s">Sistemas web e plataformas</li>
+          <li class="fx-right" style="--d:.78s">Aplicações SaaS</li>
+          <li class="fx-right" style="--d:.91s">APIs e integrações</li>
+          <li class="fx-right" style="--d:1.04s">Automação</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="cta">
+      <a class="btn pri fx-up" style="--d:1.2s" href="#formulario" data-form>Fale com a gente <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn sec fx-up" style="--d:1.35s" href="#servicos">Ver serviços <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </main>
+</div>
+</section>
+
+<!-- Forma geométrica usada nos efeitos de parallax -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="forma" viewBox="0 0 200 100">
+      <polygon points="50,0 200,0 150,100 0,100" vector-effect="non-scaling-stroke"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ===================== SOBRE ===================== -->
+<div id="sobre">
+
+  <!-- Sobre a Synza -->
+  <section class="sx intro">
+    <div class="formas" aria-hidden="true">
+      <svg class="forma a1" viewBox="0 0 200 100" data-speed="-0.22"><use href="#forma"/></svg>
+      <svg class="forma a2" viewBox="0 0 200 100" data-speed="0.2"><use href="#forma"/></svg>
+    </div>
+    <div class="s-wrap duas">
+      <div class="texto">
+        <p class="rotulo rv">Sobre a Synza</p>
+        <h2 class="rv" style="--d:.1s">Software feito com método, cuidado e propósito.</h2>
+        <p class="rv" style="--d:.2s">A Synza é uma empresa de desenvolvimento de software. Criamos sistemas web, aplicações SaaS, APIs, integrações e automações sob medida para empresas que querem crescer com tecnologia.</p>
+        <p class="rv" style="--d:.3s">Unimos planejamento, design e engenharia para entregar software sólido, seguro e fácil de evoluir, e trabalhamos lado a lado com cada cliente, entendendo o negócio antes de escrever a primeira linha de código.</p>
+      </div>
+      <div class="janela rv rv-r" style="--d:.15s">
+        <svg class="forma j1" viewBox="0 0 200 100" data-speed="-0.14" aria-hidden="true"><use href="#forma"/></svg>
+        <svg class="forma j2" viewBox="0 0 200 100" data-speed="0.12" aria-hidden="true"><use href="#forma"/></svg>
+        <svg class="forma j3" viewBox="0 0 200 100" data-speed="0.26" aria-hidden="true"><use href="#forma"/></svg>
+        <div class="simbolo" data-speed="-0.1"><img src="assets/Emblema Geométrico Branco Transparente.png" alt="Símbolo da Synza"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="sx servicos" id="servicos">
+    <div class="formas" aria-hidden="true">
+      <svg class="forma sv1" viewBox="0 0 200 100" data-speed="0.18"><use href="#forma"/></svg>
+    </div>
+    <div class="s-wrap">
+      <p class="rotulo rv">Serviços</p>
+      <h2 class="rv" style="--d:.1s">O que a Synza desenvolve para o seu negócio</h2>
+      <p class="rv sv-intro" style="--d:.2s">Escolha uma área para ver o que entregamos em cada tipo de projeto.</p>
+
+      <div class="sv rv" style="--d:.25s">
+        <div class="sv-abas" role="tablist" aria-label="Serviços" aria-orientation="vertical">
+        <button class="sv-aba" role="tab" id="sv-t1" aria-selected="true" aria-controls="sv-p1" tabindex="0" type="button"><strong>Sistemas web e plataformas</strong><small>Painéis, portais e sistemas de gestão.</small></button>
+        <button class="sv-aba" role="tab" id="sv-t2" aria-selected="false" aria-controls="sv-p2" tabindex="-1" type="button"><strong>Aplicações SaaS</strong><small>Do primeiro MVP ao produto em escala.</small></button>
+        <button class="sv-aba" role="tab" id="sv-t3" aria-selected="false" aria-controls="sv-p3" tabindex="-1" type="button"><strong>APIs e integrações</strong><small>Seus sistemas conversando entre si.</small></button>
+        <button class="sv-aba" role="tab" id="sv-t4" aria-selected="false" aria-controls="sv-p4" tabindex="-1" type="button"><strong>Automação</strong><small>Menos tarefa manual, mais tempo para o que importa.</small></button>
+        </div>
+        <div class="sv-paineis">
+        <div class="sv-painel" role="tabpanel" id="sv-p1" aria-labelledby="sv-t1">
+          <h3>Sistemas web e plataformas</h3>
+          <p class="sv-desc">Criamos sistemas e plataformas web do zero, desenhados em torno da rotina do seu negócio: cadastros, fluxos de trabalho, painéis e relatórios, acessíveis de qualquer lugar pelo navegador.</p>
+          <div class="sv-cols">
+            <div>
+              <h4>O que entregamos</h4>
+              <ul>
+              <li>Painéis administrativos e dashboards</li>
+              <li>Controle de usuários e permissões de acesso</li>
+              <li>Relatórios e exportação de dados</li>
+              <li>Portais para clientes, parceiros e fornecedores</li>
+              <li>Interface responsiva: celular, tablet e computador</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <p>Empresas que hoje controlam a operação em planilhas, papel ou sistemas genéricos que não acompanham o seu processo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sv-painel" role="tabpanel" id="sv-p2" aria-labelledby="sv-t2" hidden>
+          <h3>Aplicações SaaS</h3>
+          <p class="sv-desc">Transformamos a sua ideia em um produto online por assinatura. Cuidamos desde a primeira versão, para validar com clientes reais, até a operação preparada para crescer.</p>
+          <div class="sv-cols">
+            <div>
+              <h4>O que entregamos</h4>
+              <ul>
+              <li>Planejamento e validação do MVP</li>
+              <li>Contas, planos e cobrança recorrente</li>
+              <li>Vários clientes na mesma plataforma, com dados separados</li>
+              <li>Métricas de uso e painel de acompanhamento</li>
+              <li>Infraestrutura segura e pronta para escalar</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <p>Quem quer lançar um produto digital ou transformar uma solução interna em um negócio próprio.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sv-painel" role="tabpanel" id="sv-p3" aria-labelledby="sv-t3" hidden>
+          <h3>APIs e integrações</h3>
+          <p class="sv-desc">Conectamos os sistemas que você já usa para que troquem informações sozinhos, sem digitação duplicada e sem dados desencontrados entre as áreas da empresa.</p>
+          <div class="sv-cols">
+            <div>
+              <h4>O que entregamos</h4>
+              <ul>
+              <li>APIs próprias, documentadas e seguras</li>
+              <li>Integração com ERP, CRM, meios de pagamento e notas fiscais</li>
+              <li>Sincronização de dados entre sistemas</li>
+              <li>Notificações em tempo real entre aplicações</li>
+              <li>Monitoramento e tratamento de falhas</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <p>Empresas com vários sistemas separados ou que precisam abrir seus dados com segurança para parceiros e clientes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sv-painel" role="tabpanel" id="sv-p4" aria-labelledby="sv-t4" hidden>
+          <h3>Automação</h3>
+          <p class="sv-desc">Identificamos as tarefas repetitivas da sua rotina e as transformamos em processos automáticos, para a sua equipe gastar tempo com decisões e não com digitação e conferência.</p>
+          <div class="sv-cols">
+            <div>
+              <h4>O que entregamos</h4>
+              <ul>
+              <li>Automação de processos e fluxos de aprovação</li>
+              <li>Envio automático de e-mails, mensagens e documentos</li>
+              <li>Importação e tratamento de planilhas e arquivos</li>
+              <li>Rotinas agendadas e alertas</li>
+              <li>Geração automática de relatórios</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Ideal para</h4>
+              <p>Equipes que perdem horas com digitação, conferência e envio manual de informações.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="sv-fim rv">
+        <p>Seu projeto não se encaixa em nenhuma dessas áreas? Conte o seu caso e a gente encontra o melhor caminho.</p>
+        <a class="btn sec" href="#formulario" data-form>Conte o seu caso <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores -->
+  <section class="sx">
+    <div class="s-wrap">
+      <p class="rotulo rv">Nossos valores</p>
+      <h2 class="rv" style="--d:.1s">O que guia o nosso trabalho</h2>
+      <div class="cards">
+        <div class="col" data-speed="0.06" data-desk>
+          <article class="card rv" style="--d:.1s">
+            <span class="num">01</span>
+            <h3>Qualidade</h3>
+            <p>Código limpo, testado e pensado para durar, não só para a próxima entrega.</p>
+          </article>
+        </div>
+        <div class="col" data-speed="-0.08" data-desk>
+          <article class="card rv" style="--d:.25s">
+            <span class="num">02</span>
+            <h3>Transparência</h3>
+            <p>Comunicação clara, prazos honestos e acompanhamento em cada etapa do projeto.</p>
+          </article>
+        </div>
+        <div class="col" data-speed="0.06" data-desk>
+          <article class="card rv" style="--d:.4s">
+            <span class="num">03</span>
+            <h3>Parceria</h3>
+            <p>Tratamos o seu desafio como nosso e pensamos no longo prazo do seu negócio.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Texto gigante (parallax horizontal) -->
+  <section class="sx faixa" aria-hidden="true">
+    <div class="linha" data-speed="-0.35" data-axis="x">SOFTWARE — DESIGN — CÓDIGO — SOFTWARE — DESIGN —</div>
+    <div class="linha l2" data-speed="0.35" data-axis="x">CÓDIGO — SOFTWARE — DESIGN — CÓDIGO — SOFTWARE —</div>
+  </section>
+
+  <!-- Processo -->
+  <section class="sx">
+    <div class="s-wrap">
+      <p class="rotulo rv">Como trabalhamos</p>
+      <h2 class="rv" style="--d:.1s">Do primeiro contato à evolução contínua</h2>
+      <div class="passos">
+        <article class="passo rv" style="--d:.1s">
+          <span class="n">01</span>
+          <h3>Descoberta</h3>
+          <p>Entendemos objetivos, usuários e requisitos do projeto.</p>
+        </article>
+        <article class="passo rv" style="--d:.25s">
+          <span class="n">02</span>
+          <h3>Design</h3>
+          <p>Desenhamos fluxos e interfaces antes de construir.</p>
+        </article>
+        <article class="passo rv" style="--d:.4s">
+          <span class="n">03</span>
+          <h3>Desenvolvimento</h3>
+          <p>Entregas curtas e frequentes, sempre com testes.</p>
+        </article>
+        <article class="passo rv" style="--d:.55s">
+          <span class="n">04</span>
+          <h3>Evolução</h3>
+          <p>Acompanhamos, medimos e melhoramos o produto.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chamada final -->
+  <section class="sx final">
+    <div class="formas" aria-hidden="true">
+      <svg class="forma g1" viewBox="0 0 200 100" data-speed="-0.2"><use href="#forma"/></svg>
+      <svg class="forma g2" viewBox="0 0 200 100" data-speed="0.25"><use href="#forma"/></svg>
+    </div>
+    <div class="s-wrap centro">
+      <h2 class="rv">Vamos tirar sua ideia do papel?</h2>
+      <p class="rv" style="--d:.15s">Conte o que você precisa e vamos montar o melhor caminho para o seu projeto.</p>
+      <div class="acoes rv" style="--d:.3s">
+        <a class="btn pri" href="#formulario" data-form>Fale conosco <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn sec" href="#inicio">Voltar ao início <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer id="contato">
+  <a class="marca" href="#inicio">SYNZA</a>
+  <p> synzatech@outlook.com </p>
+  <p class="copy">© 2026 Synza. Todos os direitos reservados.</p>
+</footer>
+
+<!-- ===================== FORMULÁRIO DE CONTATO (modal) ===================== -->
+<dialog id="contatoModal" class="mc" aria-labelledby="mcTitulo">
+  <div class="mc-box">
+    <button class="mc-x" type="button" data-fechar aria-label="Fechar formulário">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+
+    <div class="mc-view" id="mcForm">
+      <h2 id="mcTitulo">Fale com a Synza</h2>
+      <p class="mc-sub">Conte o que você precisa. Respondemos por e-mail.</p>
+
+      <form id="formContato" novalidate>
+        <div class="mc-campo">
+          <label for="mcNome">Nome</label>
+          <input id="mcNome" name="nome" type="text" autocomplete="name" required>
+          <span class="mc-erro" data-erro="mcNome"></span>
+        </div>
+        <div class="mc-campo">
+          <label for="mcEmail">E-mail</label>
+          <input id="mcEmail" name="email" type="email" autocomplete="email" required>
+          <span class="mc-erro" data-erro="mcEmail"></span>
+        </div>
+        <div class="mc-campo">
+          <label for="mcMsg">Mensagem</label>
+          <textarea id="mcMsg" name="mensagem" rows="5" required></textarea>
+          <span class="mc-erro" data-erro="mcMsg"></span>
+        </div>
+
+        <!-- anti-spam: robôs preenchem, pessoas não veem -->
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="mc-honey" aria-hidden="true">
+
+        <p class="mc-status" id="mcStatus" role="status" aria-live="polite"></p>
+
+        <button class="mc-btn" id="mcEnviar" type="submit">
+          <span>Enviar mensagem</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="mc-view mc-ok" id="mcOk" hidden>
+      <svg class="mc-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l3 3 5-6"/></svg>
+      <h2>Mensagem enviada</h2>
+      <p class="mc-sub">Recebemos o seu contato e vamos responder no e-mail que você informou.</p>
+      <button class="mc-btn" type="button" data-fechar><span>Fechar</span></button>
+    </div>
+  </div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>

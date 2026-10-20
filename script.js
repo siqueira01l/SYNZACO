@@ -2,9 +2,12 @@
 var intro = document.getElementById('intro');
 var loop  = document.getElementById('loop');
 
+var pular = document.getElementById('pular');
+
 function fim() {
   if (intro.classList.contains('fim')) return;
   intro.classList.add('fim');          // some com fade
+  pular.classList.add('off');          // esconde o botão "Pular intro"
   loop.currentTime = 0;
   loop.play().catch(function () {});   // começa o fundo animado
 }
@@ -15,8 +18,16 @@ intro.addEventListener('error', fim);
 // Se o navegador bloquear o autoplay, um clique em qualquer lugar inicia a intro
 intro.play().catch(function () {
   document.addEventListener('click', function () {
+    if (intro.classList.contains('fim')) return;   // já foi pulada
     intro.play().catch(fim);
   }, { once: true });
+});
+
+// Botão "Pular intro": interrompe o vídeo e dispara o mesmo fluxo do fim natural
+pular.addEventListener('click', function (e) {
+  e.stopPropagation();
+  intro.pause();
+  intro.dispatchEvent(new Event('ended'));   // fim() e a interface (mostrar) escutam este evento
 });
 
 // ===== Synza: interface aparece ao fim da intro + scroll suave =====

@@ -335,3 +335,12 @@ pular.addEventListener('click', function (e) {
   });
 })();
 
+
+// ===== Synza: seção Equipe (foto que não carregou mostra as iniciais) =====
+(function () {
+  [].forEach.call(document.querySelectorAll('#equipe .eq-foto img'), function (img) {
+    function semFoto() { img.parentNode.classList.add('vazio'); }
+    img.addEventListener('error', semFoto);
+    if (img.complete && img.naturalWidth === 0) semFoto();
+  });
+})();

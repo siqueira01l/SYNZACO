@@ -303,3 +303,35 @@ pular.addEventListener('click', function (e) {
     });
   });
 })();
+
+
+// ===== Synza: seção Projetos (clicar para expandir detalhes e imagens) =====
+(function () {
+  var projetos = [].slice.call(document.querySelectorAll('#projetos .proj'));
+
+  projetos.forEach(function (proj) {
+    var topo = proj.querySelector('.proj-topo');
+    var btn  = proj.querySelector('.proj-btn');
+    var rot  = btn.querySelector('span');
+
+    function definir(aberto) {
+      proj.classList.toggle('aberto', aberto);
+      btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+      rot.textContent = aberto ? 'Fechar detalhes' : 'Ver detalhes';
+    }
+
+    // Clicar em qualquer parte do cabeçalho do projeto (ou no botão) abre/fecha.
+    // O botão é o controle para teclado e leitor de tela; o clique dele sobe até aqui.
+    topo.addEventListener('click', function () {
+      definir(!proj.classList.contains('aberto'));
+    });
+
+    // Imagem que não carregou: mostra o espaço reservado "Imagem em breve"
+    [].forEach.call(proj.querySelectorAll('.proj-galeria img'), function (img) {
+      function semImagem() { img.parentNode.classList.add('vazio'); }
+      img.addEventListener('error', semImagem);
+      if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) semImagem();
+    });
+  });
+})();
+
